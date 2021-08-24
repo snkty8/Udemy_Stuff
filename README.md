@@ -15,3 +15,10 @@ The purpose of milestone 1 was to create a TIC TAC TOE game playable for 2 playe
     Step 8: Wrote a function that asks for a players next positon (as a number 1-9), then uses the function from step 6 to check if its a free position.  If it is, then return the posiiton for later use.
     Step 9: Wrote a function that askes the player if they want to play again and returns a boolean.  True if they do want to play again.
     Step 10: Used while loops and the functions above to run the game.    
+
+## Milestone Project 2
+### BlackJack 
+
+The purpose of the mileston project 2 was to create a BlackJack game.
+
+    Step 1: 
