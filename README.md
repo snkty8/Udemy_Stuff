@@ -37,6 +37,8 @@ The purpose of the mileston project 2 was to create a BlackJack game.
 
     Step 8:  Write a function prompting the Player to Hit or Stand.  This function should accept the deck and the player's hand as arguments, and assing playing as a global variable.  If the player hits, employ the hit function.  If the player stands, set the playing variable to False.
 
-    Step 9: 
+    Step 9: Write functions to display cards.  When the game starts, and after each time Player takes a card, the dealer's first card is hidden and all of Player's cards are visible.  
+
+    Step 10: Write functions to handle end of game scenarios.  
 
 
