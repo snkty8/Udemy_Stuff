@@ -21,4 +21,22 @@ The purpose of milestone 1 was to create a TIC TAC TOE game playable for 2 playe
 
 The purpose of the mileston project 2 was to create a BlackJack game.
 
-    Step 1: 
+    Step 1: Import the random module.  This will be used to shuffle the deck prior to dealing.  The declare variables for suits, ranks, and values. 
+
+    Step 2: Create card object for 2 attributes: suit and rank. 
+
+    Step 3: We have 52 card objects stored to be shuffled.  We need to instatiate all 52 unique card objects and add them to the list.  So long as the card class definition appears in the code, we can build card objects inside our Deck method.
+
+    Step 4: In addition to holding card objects dealth from the Deck, the Hand class may be used to calculate the value of those cards using the values dictionary defined. 
+
+    Step 5: In addition to decks of cards and hands, we need to keep track of a Player's starting chips, bets, and ongoing winnings. This can be done using global varaiables (chips).
+
+    Step 6: Write a function for taking bets.  Since we're asking the user for an integer value, this would be a good place to use try/execpt.  We used a while loop here to continually prompt the user fr input until we recieved an integer value that was within the Player's betting limit.
+
+    Step 7: Write a function for taking hits.  Either player can take hits until they bust.  This funcgion will be called during gameplay anytime a Player requests a hit, or a Dealer's hand is less than 17.  It should take in Deck and Hand objects as arguements, and deal one card off the deck and add it to the the Hand.
+
+    Step 8:  Write a function prompting the Player to Hit or Stand.  This function should accept the deck and the player's hand as arguments, and assing playing as a global variable.  If the player hits, employ the hit function.  If the player stands, set the playing variable to False.
+
+    Step 9: 
+
+
