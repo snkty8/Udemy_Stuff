@@ -1,13 +1,15 @@
-let name = 'Sierra'
+let varOne = 'varOne'
 
 if (true) {
-    // let Name = 'Nikki
+    console.log(varOne)
+    let = varTwo = 'varTwo'
+    console.log(varTwo)
+
     if (true) {
-        let name = 'Nikola'
-        console.log(name)
+        let varFour = 'varFour'
     }
 }
 
 if (true) {
-    console.log(name)
+    let varThree = 'varThree'
 }
