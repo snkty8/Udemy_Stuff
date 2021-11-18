@@ -22,5 +22,5 @@ let getTip = function (bill = 0, tipPercent = .2) {
     return 'Total Bill: ' + totalBill
 }
 
-let grandTotal = getTip(10)
+let grandTotal = getTip(100, .25)
 console.log(grandTotal)
