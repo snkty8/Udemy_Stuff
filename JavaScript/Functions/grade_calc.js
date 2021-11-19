@@ -3,7 +3,9 @@
 
 
 let grade_cal = function (score, possibleScore) {
+
     let percent = (score/possibleScore)*100
+    
     if (percent >= 90) {
         letterGrade = 'A'
     } else if (percent <=89 && percent >= 80) {
