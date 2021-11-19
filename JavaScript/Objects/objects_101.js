@@ -26,5 +26,5 @@ let person = {
 
 console.log(`${person.Name} is ${person.Age} years old, and lives in ${person.location}.`)
 
-person.Age = 37
+person.Age = person.Age + 1
 console.log(`${person.Name} is ${person.Age} years old, and lives in ${person.location}.`)
