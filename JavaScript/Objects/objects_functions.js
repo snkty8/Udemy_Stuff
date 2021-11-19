@@ -25,19 +25,14 @@ console.log(bookSummary.pageCountSummary)
 // Challenge Area
 // create function take F in and return object with F, C, K
 
-let temp = {
-    F: 100,
-    C: 0,
-    K: 0
-}
-
-let tempConvert = function(F) {
-    temp.C = (temp.F-32)*(5/9)
-    temp.K = temp.C + 273.15
+let tempConvert = function (F) {
     return {
-        summary: console.log(`When Farenheit temp is ${temp.F}, Celcius temp is ${temp.C}, and Kelvin temp is ${temp.K}.`)
+        F: F,
+        K: (F + 459.67) * (5/9),
+        C: (F - 32) * (5/9)
     }
 }
 
-let value = tempConvert(temp)
-console.log(value.summary)
+let temps = tempConvert(74)
+console.log(temps)
+
