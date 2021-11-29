@@ -1,10 +1,12 @@
 let resturant = {
     Name: 'Wok N Roll',
     guestCapacity: 75,
-    guestCount: 0,
+    guestCount: 73,
     checkAvalibility: function (partySize) {
-        console.log(partySize)
+        let seatsLeft = this.guestCapacity - this.guestCount
+        return partySize <= seatsLeft
     }
 }
 
-resturant.checkAvalibility(4)
+let Status = resturant.checkAvalibility(4)
+console.log(Status)
