@@ -15,3 +15,12 @@ console.log(password.includes('password'))
 
 // Trim method
 console.log(Name.trim())
+
+// challenge area
+//length is more than 8 and does not contain password
+let isValidPassword = function (password) {
+    return password.length >= 8 && !password.includes('password')
+    }
+console.log(isValidPassword('adafd'))
+console.log(isValidPassword('adafd1232'))
+console.log(isValidPassword('adafdpassword'))
