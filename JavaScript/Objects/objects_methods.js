@@ -15,16 +15,9 @@ let resturant = {
     
 }
 
-//seatParty
-
-
-//removeParty
-
 
 
 resturant.seatParty(8)
 console.log(resturant.checkAvalibility)
 resturant.removeParty(8)
 console.log(resturant.checkAvalibility)
-// let Status = resturant.checkAvalibility(4)
-// console.log(Status)
