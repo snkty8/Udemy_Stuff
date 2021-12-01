@@ -25,6 +25,7 @@ const notes = [
 notes[2] = 'this is the new note 3'
 
 //For Each
+// Passing a function in a functuin is called a call back function
 notes.forEach(function (item, index) {
     console.log(index)
     console.log(item)
@@ -32,3 +33,9 @@ notes.forEach(function (item, index) {
 
 console.log(notes.length)
 console.log(notes)
+
+// Counting ...1
+//set count variable, then add condition, check the count
+for (let count = 0; count <= 2; count ++) {
+    console.log(count)
+}

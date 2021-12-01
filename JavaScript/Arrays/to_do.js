@@ -24,6 +24,7 @@ console.log(`You have ${todos.length} todos!!`)
 // 1. stuff
 // 2. more stuff
 
+// Passing a function in a functuin is called a call back function
 todos.forEach(function (item, index) {
     const num = index + 1
     console.log(`${num}. ${item}`)
