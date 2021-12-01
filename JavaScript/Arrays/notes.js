@@ -36,6 +36,10 @@ console.log(notes)
 
 // Counting ...1
 //set count variable, then add condition, check the count
-for (let count = 0; count <= 2; count ++) {
+for (let count = 2; count >= 0; count --) {
     console.log(count)
+}
+
+for (let count = notes.length - 1; count >= 0; count--) {
+    console.log(notes[count])
 }
