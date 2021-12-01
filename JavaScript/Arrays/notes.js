@@ -24,5 +24,11 @@ const notes = [
 //Can use indexing to replace an item
 notes[2] = 'this is the new note 3'
 
+//For Each
+notes.forEach(function (item, index) {
+    console.log(index)
+    console.log(item)
+})
+
 console.log(notes.length)
 console.log(notes)
