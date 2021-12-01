@@ -30,7 +30,7 @@ todos.forEach(function (item, index) {
     console.log(`${num}. ${item}`)
 })
 
-for (let count = 0; count < todos.length; count++) {
-    const num = count + 1
-    console.log(`${num}. ${todos[count]}`)
-}
+// for (let count = 0; count < todos.length; count++) {
+//     const num = count + 1
+//     console.log(`${num}. ${todos[count]}`)
+// }
