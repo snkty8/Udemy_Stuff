@@ -24,5 +24,14 @@ const deleteTodo = function (todos, todoText) {
     }
 }
 
-deleteTodo(todos, 'Take a shower')
-console.log(todos)
+// deleteTodo(todos, 'aTake a shower')
+// console.log(todos)
+
+const getThingsTodo = function (todos) {
+    return todos.filter(function (todo) {
+        return todo.completed === false
+    })
+}
+
+console.log(getThingsTodo(todos))
+
