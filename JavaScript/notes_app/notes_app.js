@@ -3,29 +3,13 @@ const notes = [{
     body: 'I would like to go to Spain'
 }, {
     title: 'Habits to work on',
-    body: 'Exercise. Eating a bit better'
+    body: 'Exercise. Eating a bit better.'
 }, {
     title: 'Office modification',
     body: 'Get a new seat'
 }]
 
-// DOM - Document Object Model
-
-
-// Query and remove
-// const p = document.querySelector('p')
-// p.remove()
-
-// Qurey all and remove
-const ps = document.querySelectorAll('p')
-
-ps.forEach(function (p) {
-    p.textContent = '*****'
-    // console.log(p.textContent)
-    // p.remove()
+document.querySelector("button").addEventListener("click", function (e) {
+    console.log('Did this work?')
+    console.log(e)
 })
-
-// Add a new element
-const newParagrah = document.createElement('p')
-newParagrah.textContent = 'This a new element from JavaScript'
-document.querySelector('body').appendChild(newParagrah)
