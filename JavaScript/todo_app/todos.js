@@ -15,19 +15,6 @@ const todos = [{
     completed: true
 }]
 
-// const the = document.querySelectorAll('p')
-
-// the.forEach(function (p) {
-//     if (p.textContent.includes('the')) {
-//         p.remove()
-//     } 
-
-// })
-
-// You have 2 todos left (p element)
-// Add a paragrah for each todo above (use text value)
-
-
 const filters = {
     searchText: ''
 }
@@ -56,19 +43,14 @@ const renderTodos = function (todos, filters) {
 
 renderTodos(todos, filters)
 
-
-
-// Listen for new todo
-document.querySelector("#new-todo").addEventListener("click", function (e) {
-    console.log('Let us see!!')
-})
-
-// Listen for todo text change
-document.querySelector("#add-todos").addEventListener("input", function (e) {
-    console.log(e.target.value)
-})
-
 document.querySelector('#search-text').addEventListener('input', function (e) {
     filters.searchText = e.target.value
     renderTodos(todos, filters)
+})
+
+
+document.querySelector('#name-form').addEventListener("submit", function(e) {
+    e.preventDefault()
+    console.log(e.target.elements.firstTodo.value)
+    e.target.elements.firstTodo.value = ''
 })
