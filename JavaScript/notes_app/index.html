@@ -6,11 +6,13 @@
         <h1>Notes App</h1>
         <h2>Take Notes</h2>
         <input id= "search-text" type="text" placeholder="filter notes"> 
+        <select id="filter-by">
+            <option value="byEdited">Sort By Last Edited</option>
+            <option value="byCreated">Sort By Recently Added</option>
+            <option value="ABC">Sort By ABC</option>
+        </select>
         <div id="notes"></div>
         <button id="create-note">Create Note</button>
-        <label>
-            <input id="for-fun" type="checkbox"> Check me for fun
-        </label>
         <script src="notes_app.js"></script>
     </body>
 </html>
