@@ -28,19 +28,35 @@ const todos = [{
 // Add a paragrah for each todo above (use text value)
 
 
-const inCompleteTodos = todos.filter(function (todo) {
-    return !todo.completed
-})
+const filters = {
+    searchText: ''
+}
 
-const summary = document.createElement('h2')
-summary.textContent = `You have ${inCompleteTodos.length} todos left`
-document.querySelector('body').appendChild(summary)
+const renderTodos = function (todos, filters) {
+    const filteredTodos = todos.filter(function (todo) {
+        return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
 
-todos.forEach(function (todo) {
-    const p = document.createElement('p')
-    p.textContent = todo.text
-    document.querySelector('body').appendChild(p)
+    const inCompleteTodos = filteredTodos.filter(function (todo) {
+        return !todo.completed
+    })
+
+    document.querySelector('#todos').innerHTML = ''
+    
+    const summary = document.createElement('h2')
+    summary.textContent = `You have ${inCompleteTodos.length} todos left`
+    document.querySelector('#todos').appendChild(summary)
+    
+    filteredTodos.forEach(function (todo) {
+        const p = document.createElement('p')
+        p.textContent = todo.text
+        document.querySelector('#todos').appendChild(p)
 })
+}
+
+renderTodos(todos, filters)
+
+
 
 // Listen for new todo
 document.querySelector("#new-todo").addEventListener("click", function (e) {
@@ -50,4 +66,9 @@ document.querySelector("#new-todo").addEventListener("click", function (e) {
 // Listen for todo text change
 document.querySelector("#add-todos").addEventListener("input", function (e) {
     console.log(e.target.value)
+})
+
+document.querySelector('#search-text').addEventListener('input', function (e) {
+    filters.searchText = e.target.value
+    renderTodos(todos, filters)
 })
