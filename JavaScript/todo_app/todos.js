@@ -42,3 +42,7 @@ todos.forEach(function (todo) {
     document.querySelector('body').appendChild(p)
 })
 
+
+document.querySelector("button").addEventListener("click", function (e) {
+    console.log('Let us see!!')
+})
