@@ -58,3 +58,7 @@ document.querySelector('#name-form').addEventListener("submit", function(e) {
     renderTodos(todos, filters)
     e.target.elements.firstTodo.value = ''
 })
+
+document.querySelector('#hide-completed').addEventListener('change', function (e) {
+    renderTodos(todos, filters)
+})
