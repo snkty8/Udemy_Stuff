@@ -43,6 +43,6 @@ todos.forEach(function (todo) {
 })
 
 
-document.querySelector("button").addEventListener("click", function (e) {
+document.querySelector("#new-todo").addEventListener("click", function (e) {
     console.log('Let us see!!')
 })
