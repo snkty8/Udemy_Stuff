@@ -27,6 +27,17 @@ const todos = [{
 // You have 2 todos left (p element)
 // Add a paragrah for each todo above (use text value)
 
-const newParagrah = document.createElement('p')
-newParagrah.textContent = 'You still have 2 todos for the day'
-document.querySelector('body').appendChild(newParagrah)
+
+const inCompleteTodos = todos.filter(function (todo) {
+    return !todo.completed
+})
+
+const summary = document.createElement('h2')
+summary.textContent = `You have ${inCompleteTodos.length} todos left`
+document.querySelector('body').appendChild(summary)
+
+todos.forEach(function (todo) {
+    const p = document.createElement('p')
+    p.textContent = todo.text
+    document.querySelector('body').appendChild(p)
+})
