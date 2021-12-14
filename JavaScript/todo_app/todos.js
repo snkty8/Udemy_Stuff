@@ -51,6 +51,10 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
 
 document.querySelector('#name-form').addEventListener("submit", function(e) {
     e.preventDefault()
-    console.log(e.target.elements.firstTodo.value)
+    todos.push({
+        text: e.target.elements.firstTodo.value,
+        completed: false
+    })
+    renderTodos(todos, filters)
     e.target.elements.firstTodo.value = ''
 })
