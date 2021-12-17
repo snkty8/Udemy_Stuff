@@ -14,6 +14,11 @@ const filters = {
     searchText: ''
 }
 
+// localStorage.setItem("location", "Jacksonville")
+// console.log(localStorage.getItem("location"))
+// localStorage.removeItem("location")
+localStorage.clear()
+
 const renderNotes = function (notes, filters) {
     const filterNotes = notes.filter(function (note) {
         return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
