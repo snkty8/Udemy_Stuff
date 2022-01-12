@@ -19,17 +19,17 @@ const renderTodos = function (todos, filters) {
     const filteredTodos = todos.filter(function (todo) {
         const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
         const hideCompletedMatch = !filters.hideCompleted || !todo.completed
+    
         return searchTextMatch && hideCompletedMatch
     })
+
 
     const inCompleteTodos = filteredTodos.filter(function (todo) {
         return !todo.completed
     })
 
     document.querySelector('#todos').innerHTML = ''
-
     document.querySelector('#todos').appendChild(getSummaryDOM(inCompleteTodos))
-
 
     filteredTodos.forEach(function (todo) {
         document.querySelector('#todos').appendChild(generateTodoDOM(todo))
