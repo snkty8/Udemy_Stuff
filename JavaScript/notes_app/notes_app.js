@@ -8,13 +8,15 @@ renderNotes(notes, filters)
 
 // # grabs id
 document.querySelector("#create-note").addEventListener("click", function (e) {
+    const id = uuidv4()
+
     notes.push({
-    id: uuidv4(),    
+    id: id,    
     title: '',
     body: ''
     })
     saveNotes(notes)
-    renderNotes(notes, filters)
+    location.assign(`/notes_app/edit.html#${id}`)
 })
 
 
