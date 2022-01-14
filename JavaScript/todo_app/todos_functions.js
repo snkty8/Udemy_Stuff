@@ -24,6 +24,7 @@ const renderTodos = function (todos, filters) {
     })
 
 
+
     const inCompleteTodos = filteredTodos.filter(function (todo) {
         return !todo.completed
     })
@@ -55,6 +56,7 @@ const generateTodoDOM =  function (todo) {
 
         // Setup todo check box
         checkBox.setAttribute('type', 'checkbox')
+        checkBox.checked = todo.completed
         todoElement.appendChild(checkBox)
 
         //Setup the todo text
