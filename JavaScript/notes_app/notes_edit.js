@@ -34,7 +34,7 @@ removeElement.addEventListener('click', function (e) {
 window.addEventListener('storage', function (e) {
     if (e.key === 'notes') {
         notes = JSON.parse(e.newValue)
-        let note = notes.find(function (note) {
+        note = notes.find(function (note) {
             return note.id === noteId
         })
 
