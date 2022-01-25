@@ -58,8 +58,8 @@ const dateTwo = new Date()
 const dateOneTimeStamp = dateOne.getTime()
 const dateTwoTimeStamp = dateTwo.getTime()
 
-if (dateOneTimeStamp < dateTwoTimeStamp) {
+if (dateOneTimeStamp > dateTwoTimeStamp) {
     console.log(dateOne.toString())
-} else if (dateTwoTimeStamp < dateOneTimeStamp) {
+} else if (dateTwoTimeStamp > dateOneTimeStamp) {
     console.log(dateTwo.toString())
 }
