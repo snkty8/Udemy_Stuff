@@ -9,11 +9,13 @@ renderNotes(notes, filters)
 // # grabs id
 document.querySelector("#create-note").addEventListener("click", function (e) {
     const id = uuidv4()
-
+    const timeStamp = moment().valueOf()
     notes.push({
     id: id,    
     title: '',
-    body: ''
+    body: '',
+    createdAt: timeStamp,
+    updatedAt : timeStamp
     })
     saveNotes(notes)
     location.assign(`/notes_app/edit.html#${id}`)
@@ -36,13 +38,3 @@ window.addEventListener('storage', function (e) {
     }
 })
 
-const now = moment()
-now.subtract(1, 'week').subtract(20, 'days')
-console.log(now.format('MMMM Do YYYY'))
-console.log(now.fromNow())
-const nowTimeStamp = now.valueOf()
-console.log(moment(nowTimeStamp).toString())
-
-const today = moment()
-today.subtract(37, 'years').add(6,'months').subtract(8, 'days')
-console.log(today.format('MMM, D YYYY'))
