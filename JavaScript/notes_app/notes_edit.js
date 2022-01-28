@@ -7,7 +7,7 @@ const bodyElement = document.querySelector('#note-body')
 const removeElement = document.querySelector('#remove-note')
 const dateElement = document.querySelector('#last-edited')
 
-if (note === undefined) {
+if (!note) {
     location.assign('/notes_app/index.html')
 }
 
@@ -40,7 +40,7 @@ window.addEventListener('storage', (e) => {
         notes = JSON.parse(e.newValue)
         note = notes.find((note) => note.id === noteId)
 
-        if (note === undefined) {
+        if (!note) {
             location.assign('/notes_app/index.html')
         }
 
